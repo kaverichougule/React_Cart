@@ -119,3 +119,33 @@
 .totalHeading{
     font-weight: 500;
 }
+@media screen and (max-width:769px) {
+    .maintContainer{
+        padding: 1rem 1rem 1rem 1rem;
+    }
+    .quantity{
+        gap: 2rem;
+    }
+    .singleItem{
+        padding: 1rem 1rem 1rem 0;
+    }
+
+}
+@media screen and (max-width:426px){
+    .mainContainer{
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .container{
+        width: 100%;
+    }
+    .quantity{
+        gap: 1rem;
+    }
+    .singleItem{
+        padding: 1rem 1rem 1rem 0rem;
+    }
+    .orderSummary{
+        width: 100%;
+    }
+}
