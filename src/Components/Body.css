@@ -1,0 +1,121 @@
+.mainContainer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 4rem 1rem 4rem;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    /* margin-top: 4rem; */
+    width: 50%;
+}
+
+.items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+}
+.singleItem{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #FDE7E7;
+    padding: 1rem 2rem 1rem 1rem;
+    border-radius: 0.5rem;
+    align-items: center;
+}
+.ProductImg{
+    width: 5rem;
+    height: 5rem;
+}
+.singleItemInfo{
+    display: flex;
+}
+.productName{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.quantity{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+.trash{
+    height: 2rem;
+    width: 2rem;
+    background-color: #0B022D;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.Subquantity{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Subquantity i{
+    color: #0B022D;
+    font-size: 1.5rem;
+}
+.orderSummary{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    gap: 2rem;
+    background-color: #0B022D;
+    color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+.orderSummarySub{
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-bottom: 3px solid #D9797B;
+}
+.CalcTotal, .totalSum{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+.CalcTotal{
+    border-bottom: 3px solid #D9797B; 
+}
+
+.subtotal{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+.totalSum{
+    background-color: #D9797B;
+    color: #0B022D;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+.total{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    font-size: 1.2rem;
+}
+.totalHeading{
+    font-weight: 500;
+}
