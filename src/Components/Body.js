@@ -6,7 +6,8 @@ export default function Body() {
   const [totalPrice, setTotalPrice] = useState(2199.96);
   const [cartItems, setCartItems] = useState(data);
   const [isCartEmpty, setIsCartEmpty] = useState(cartItems.length === 0);
-
+  let [discount,setDiscount]=useState((totalPrice*10)/100);
+  let [MainTotal,setMainTotal]=useState(totalPrice-discount);
   function handleUpdateTotal(title, newCount) {
     // Update the count for the specific item
     const updatedCartItems = cartItems.map((item) =>
@@ -22,6 +23,8 @@ export default function Body() {
     // Update both the cart items and total price
     setCartItems(updatedCartItems);
     setTotalPrice(newTotalPrice);
+    setDiscount((totalPrice*10)/100)
+    setMainTotal(totalPrice-discount)
   }
 
   function handleRemoveItem(title, count) {
@@ -71,11 +74,17 @@ export default function Body() {
         <div className="CalcTotal">
           <div className="subtotal">
             <p className="subtotalHeading">Subtotal</p>
-            <p>$12,500</p>
+            <p>$
+            {("" + totalPrice).substring(
+              0,
+              ("" + totalPrice).indexOf(".") + 3
+            )}</p>
           </div>
           <div className="subtotal">
             <p className="subtotalHeading">Discount(10%)</p>
-            <p>-$1,452</p>
+            <p>${
+              (""+discount).substring(0,(""+discount).indexOf(".")+3)
+            }</p>
           </div>
         </div>
         <div className="totalSum">
@@ -83,9 +92,9 @@ export default function Body() {
             <p className="totalHeading">Total</p>
             <p>
               $
-              {("" + totalPrice).substring(
+              {("" + MainTotal).substring(
                 0,
-                ("" + totalPrice).indexOf(".") + 3
+                ("" + MainTotal).indexOf(".") + 3
               )}
             </p>
           </div>
